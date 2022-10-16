@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d1d1d;
+    margin: 10px;
+}
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.operators {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color:brown;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+h1  {
+    border: 1px solid white;
+    padding: 20px 150px;
+    color: white;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+}
