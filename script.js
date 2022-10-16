@@ -21,6 +21,8 @@ num.forEach((n) => {
         if(curstate == "final") {
             curstate = "init"
             negstate = false
+            decstate = "nodec"
+            op = undefined;
             display.innerText = n.innerText
         }
         else {
@@ -70,7 +72,12 @@ equal.addEventListener('click', () => {
                 display.innerText = numfunc1(vals[0]) + numfunc2(vals[1])
                 break
             case '-':
-                display.innerText = Number(vals[0]) - Number(vals[1])
+                if (negstate == true) {
+                    display.innerText = - Number(vals[1]) - Number(vals[2])
+                }
+                else {
+                    display.innerText = Number(vals[0]) - Number(vals[1])
+                }
                 break;
             case '÷':
                 display.innerText = Number(vals[0]) / Number(vals[1])
@@ -81,7 +88,7 @@ equal.addEventListener('click', () => {
         }
     }
     curstate = "final"
-    op = undefined;
+    
 });
 
 dec.addEventListener('click', () => {
@@ -101,7 +108,7 @@ dec.addEventListener('click', () => {
 });
 
 neg.addEventListener('click', () => {
-    if (negstate == false) {
+    if (negstate == false && curstate != "final") {
         display.innerText = "-" + display.innerText
         negstate = true
     }
