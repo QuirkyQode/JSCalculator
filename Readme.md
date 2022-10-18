@@ -7,6 +7,9 @@
 - The clear button clear the display.
 - The back button can delete the latest character keyed in.
 
+## Deployed link:
+[https://javascript-basiccalculator.netlify.app/](https://javascript-basiccalculator.netlify.app/)
+
 ### Here is the snapshot of the calculator:
 
 ![snapshot](./snap.png)
