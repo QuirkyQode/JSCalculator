@@ -23,5 +23,6 @@
   - dec1 indicates that the first operand entered is a decimal numbers .
   - dec2 indicates that the second operand entered is a decimal numbers .
   - dec12 indicates that both the first and second operands entered are decimal numbers .
+- The program supports negating the first operand by using a state called negstate.
 - Some more error handling is yet to be done.
 
