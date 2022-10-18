@@ -1,6 +1,7 @@
 let num = document.querySelectorAll(".num")
 let ops = document.querySelectorAll(".op")
 let display = document.querySelector(".display")
+let warn = document.querySelector(".warning")
 let clear = document.querySelector(".clear")
 let back = document.querySelector(".back")
 let equal = document.querySelector(".op-equal")
@@ -115,11 +116,15 @@ neg.addEventListener('click', () => {
 });
 
 back.addEventListener('click', () => {
+    c = display.innerText[display.innerText.length-1]
+    warn.innerText = c
+    if(c == "+" || c == "-" || c == "x" || c =="÷"){
+        curstate = "init"
+    }
     display.innerText = display.innerText.slice(0, -1)
 });
 
 clear.addEventListener('click', () => {
     display.innerText = ""
     curstate = "final"
-    negstate = false
 });
